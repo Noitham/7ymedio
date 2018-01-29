@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_mario"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:weightSum="1"
+    tools:context="com.proven.cat.a7ymedio.Settings"
+    android:id="@+id/settingsLayout">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textColor="@color/colorBlack"
+        android:textSize="30dp"
+        android:text="Ajustes"
+        android:gravity="center"/>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/nameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre: "
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="5dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nameInput"
+            android:textColor="@color/colorBlack"
+            android:inputType="textPersonName"/>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/levelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dificultad: "
+                android:id="@+id/txtDificultad"
+                android:textColor="@color/colorBlack"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/dificultadValue"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:layout_marginLeft="5dp"/>
+
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekBar1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <CheckBox
+        android:layout_marginTop="10dp"
+        android:text="Musica"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox"
+        android:checked="false"
+        android:textColor="@color/colorBlack"
+        android:textSize="18dp"/>
+
+    <RadioGroup android:id="@+id/gruporb"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:textSize="18dp"
+        android:layout_marginTop="10dp">
+        <RadioButton
+            android:text="Fondo 1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radiob1"
+            android:textColor="@color/colorBlack"
+            android:textSize="18dp"/>
+
+        <RadioButton
+            android:text="Fondo 2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radiob2"
+            android:textColor="@color/colorBlack"
+            android:textSize="18dp"/>
+    </RadioGroup>
+
+    <Button
+
+        android:text="Confirmar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sendButton"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

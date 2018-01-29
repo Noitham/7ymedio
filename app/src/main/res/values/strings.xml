@@ -1,0 +1,20 @@
+<resources>
+
+    <string name="app_name">7 Y MEDIO</string>
+    <string name="points">Puntos:</string>
+    <string name="movements">Movimientos realizados:</string>
+    <string name="pos0">Posicion 0</string>
+    <string name="pos1">Posicion 1</string>
+    <string name="pos2">Posicion 2</string>
+    <string name="pos3">Posicion 3</string>
+    <string name="pos4">Posicion 4</string>
+    <string name="pos5">Posicion 5</string>
+    <string name="pos6">Posicion 6</string>
+    <string name="pos7">Posicion 7</string>
+    <string-array name="fondos">
+        <item>Fondo1</item>
+        <item>Fondo2</item>
+        <item>Fondo3</item>
+    </string-array>
+
+</resources>

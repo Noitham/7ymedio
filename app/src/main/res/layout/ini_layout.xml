@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_mario"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/Iniciar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/buttonStart"
+            android:layout_margin="10dp"
+            android:text="Iniciar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Ajustes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Iniciar"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/buttonSettings"
+            android:layout_margin="10dp"
+            android:text="Ajustes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_above="@+id/Iniciar"
+        android:weightSum="1">
+
+
+        <TextView
+            android:id="@+id/iniTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginBottom="70dp"
+            android:text="7 y medio"
+            android:textColor="@color/colorBlack"
+            android:textSize="50dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
