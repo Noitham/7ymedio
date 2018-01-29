@@ -96,7 +96,7 @@ public class Settings extends AppCompatActivity {
             case R.id.opExit:
                 Toast.makeText(this.getApplicationContext(),
                         "menu_sortir", Toast.LENGTH_SHORT).show();
-                exitApp();
+                endProgram();
                 return true;
             case R.id.opTutorial:
                 Toast.makeText(this.getApplicationContext(),
@@ -260,16 +260,11 @@ public class Settings extends AppCompatActivity {
         startActivity(intent1);
     }
 
-    //Method called when exit app button in menu is pressed.
-    private void exitApp() {
-
-        endProgram("Confirmación Salida");
-    }
 
     //Method that ends the program.
-    public void endProgram(String msg) {
+    public void endProgram() {
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setTitle(msg);
+        alert.setTitle("Confirmación Salida");
         alert.setMessage("Está seguro que desea salir?");
         alert.setPositiveButton("Si", new DialogInterface.OnClickListener() {
             @Override
