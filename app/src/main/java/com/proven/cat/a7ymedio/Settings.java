@@ -13,10 +13,13 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 /**
  * Created by alumne on 21/11/17.
@@ -34,6 +37,12 @@ public class Settings extends AppCompatActivity {
     CheckBox checkbox;
     Button sendButton;
     EditText txtInput;
+    TextView txtName;
+    TextView txtDifficulty;
+    TextView txtSettings;
+
+    RadioButton radioButton1;
+    RadioButton radioButton2;
 
     private LinearLayout settingsLayout;
 
@@ -56,7 +65,13 @@ public class Settings extends AppCompatActivity {
         radioGroup = (RadioGroup) findViewById(R.id.gruporb);
         radioGroup.check(R.id.radiob1);
 
-        txtInput= (EditText) findViewById(R.id.nameInput);
+        txtInput = (EditText) findViewById(R.id.nameInput);
+        txtName = (TextView) findViewById(R.id.txtName);
+        txtDifficulty = (TextView) findViewById(R.id.txtDificultad);
+        txtSettings = (TextView) findViewById(R.id.txtSettings);
+
+        radioButton1 = (RadioButton) findViewById(R.id.radiob1);
+        radioButton2 = (RadioButton) findViewById(R.id.radiob2);
 
         settingsLayout = (LinearLayout) findViewById(R.id.settingsLayout);
 
@@ -177,11 +192,13 @@ public class Settings extends AppCompatActivity {
                 switch (checkedId) {
                     case R.id.radiob1:
                         showMessage("Fondo 1 selected");
+                        setTextColorBlack();
                         settingsLayout.setBackgroundResource(R.drawable.background_mario);
                         settingsData.putInt("background", 1);
                         break;
                     case R.id.radiob2:
-                        showMessage("Fondo 1 selected");
+                        showMessage("Fondo 2 selected");
+                        setTextColorWhite();
                         settingsLayout.setBackgroundResource(R.drawable.background_mario2);
                         settingsData.putInt("background", 2);
                         break;
@@ -258,6 +275,30 @@ public class Settings extends AppCompatActivity {
         intent1.setDataAndType(Uri.parse("http://commonsware.com/Android/excerpt.pdf"), "application/pdf");
         intent1.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         startActivity(intent1);
+    }
+
+    //Sets TextViews of the layout to white color.
+    public void setTextColorWhite () {
+        textSeekBar.setTextColor(getResources().getColor(R.color.colorWhite));
+        txtName.setTextColor(getResources().getColor(R.color.colorWhite));
+        txtDifficulty.setTextColor(getResources().getColor(R.color.colorWhite));
+        checkbox.setTextColor(getResources().getColor(R.color.colorWhite));
+        radioButton1.setTextColor(getResources().getColor(R.color.colorWhite));
+        radioButton2.setTextColor(getResources().getColor(R.color.colorWhite));
+        txtSettings.setTextColor(getResources().getColor(R.color.colorWhite));
+        txtInput.setTextColor(getResources().getColor(R.color.colorWhite));
+    }
+
+    //Sets TextViews of the layout to black color.
+    public void setTextColorBlack () {
+        textSeekBar.setTextColor(getResources().getColor(R.color.colorBlack));
+        txtName.setTextColor(getResources().getColor(R.color.colorBlack));
+        txtDifficulty.setTextColor(getResources().getColor(R.color.colorBlack));
+        checkbox.setTextColor(getResources().getColor(R.color.colorBlack));
+        radioButton1.setTextColor(getResources().getColor(R.color.colorBlack));
+        radioButton2.setTextColor(getResources().getColor(R.color.colorBlack));
+        txtSettings.setTextColor(getResources().getColor(R.color.colorBlack));
+        txtInput.setTextColor(getResources().getColor(R.color.colorBlack));
     }
 
 
